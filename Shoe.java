@@ -1,10 +1,10 @@
-import java.util.ArrayList;
 public class Shoe extends Deck{
     public Shoe(int deckNum){
-        ArrayList<Card> temp =  new ArrayList<Card>();
+        cards.clear();
         for(int x = 0;  x < deckNum; x++){
-            temp.addAll(cards);
+            Deck deck = new Deck();
+            cards.addAll(deck.cards);
         }
-        cards = temp;
+        this.shuffleDeck();
     }
 }

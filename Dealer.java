@@ -1,11 +1,14 @@
-import java.util.ArrayList;
-
 public class Dealer extends Player{
     
-    private ArrayList<Card> hand = new ArrayList<Card>();
+    Deck deck;
 
-    public Dealer(){
+    public Dealer(Deck deck){
+        super(Integer.MAX_VALUE);
+        this.deck = deck;
+    }
 
+    public Card deal(){
+       return deck.deal();
     }
 
 }
