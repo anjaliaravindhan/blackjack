@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Dealer {
+public class Dealer extends Player{
     
     private ArrayList<Card> hand = new ArrayList<Card>();
 
@@ -8,10 +8,4 @@ public class Dealer {
 
     }
 
-    public void addCard(Card card){
-        hand.add(card);
-    }
-
-
-    
 }
