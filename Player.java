@@ -2,10 +2,13 @@ import java.util.ArrayList;
 
 public class Player {
 
-    private ArrayList<Card> hand = new ArrayList<Card>();
-    private int cash = 0;
-    public Player(int startingCash){
+    public ArrayList<Card> hand = new ArrayList<Card>();
+    public int cash = 0;
+    public String name; 
+
+    public Player(int startingCash, String playerName){
         cash = startingCash;
+        this.name = playerName;
     }
 
     public void addCard(Card card){
@@ -17,7 +20,7 @@ public class Player {
         for(int a = 0; a < hand.size(); a++){
             res += hand.get(a) + "\n";
         }
-        return res + cash;
+        return res + "$" + cash;
     }
 
     public void bet(int bet){

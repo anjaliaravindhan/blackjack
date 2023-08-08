@@ -8,10 +8,10 @@ public enum Rank {
     Eight(8), 
     Nine(9),
     Ten(10), 
-    Eleven(11),
-    Twelve(12), 
-    Thirteen(13),
-    Fourteen(14);
+    Jack(11),
+    Queen(12), 
+    King(13),
+    Ace(14);
 
     private int rank;
     private Rank(int rank){

@@ -13,7 +13,7 @@ public class Main {
           System.out.println(dealer.deal());
           System.out.println(dealer.deal());
           System.out.println(dealer.deal());
-          Player player1 = new Player(1000);
+          Player player1 = new Player(1000, "anjali");
           Table table = new Table(4, 4);
           table.addPlayer(player1);
         
