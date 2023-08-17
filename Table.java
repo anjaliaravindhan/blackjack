@@ -1,11 +1,15 @@
 import java.util.ArrayList;
 
 public class Table {
-    class Seat{
+    public class Seat{
         public Player player; 
         public int betAmount = 0;
         public Seat(Player p){
             this.player = p;
+        }
+
+        public void collectBets(){
+            betAmount += player.bet();
         }
     }
   
@@ -30,9 +34,17 @@ public class Table {
     public String toString(){
         String res = "";
         for(int x = 0; x < seats.size(); x++){
-            res += seats.get(x).player.name + "is in seat number " + x + "and has cards " + seats.get(x).player.toString();
+            res += seats.get(x).player.name + " is in seat number " + x + " and has cards: \n" + seats.get(x).player.toString() + "\nCurrent Bet Amount: $" + seats.get(x).betAmount + "\n\n";
         }
+        res += dealer.name  + " has cards: \n" + dealer.toString() + "\n";
+
         return res;
+    }
+
+    public void deal(Seat s){
+        Card deal = dealer.deal();
+        s.player.addCard(deal);
     }
     
 }
+ 

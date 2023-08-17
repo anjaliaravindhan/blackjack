@@ -13,7 +13,9 @@ public enum Rank {
     King(13),
     Ace(14);
 
-    private int rank;
+    public int rank;
+    public int cardValue;
+
     private Rank(int rank){
         this.rank = rank;
     }

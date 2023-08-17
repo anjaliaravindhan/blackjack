@@ -1,6 +1,6 @@
 public class Card {
-    private Rank Rank;
-    private Suit Suit;
+    public Rank Rank;
+    public Suit Suit;
 
     public String toString(){
         return this.Rank + " " + this.Suit;
